@@ -267,5 +267,6 @@ cython_debug/
 # End of https://www.toptal.com/developers/gitignore/api/django,jupyternotebooks,python
 
 # data
-musinsa_data.csv
-musinsa_list_row.csv
+Bitamin/HaJun/musinsa_data.csv
+Bitamin/HaJun/musinsa_list_row.csv
+IMG_70E2846C0FEC-1.jpeg
