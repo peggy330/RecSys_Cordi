@@ -48,7 +48,7 @@ table {
 `;
 
 const Container = styled.div`
-    max-width: 480px;
+    width: 430px;
     margin: 0 auto;
     padding-top: 44px;
     height: 700px;
@@ -81,12 +81,24 @@ const stylelist = [{Img: "https://static.lookpin.co.kr/20210301163656-7cb2/09097
                 {Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx3znK8-sksrkd13YERneLzdbY3V57wEi2pg&usqp=CAU", sname: '스트릿', description: '나에게 어울리는 스트릿'}
                             ];
 
-const Imgbox = styled.img`
+const Imgbox = styled.div`
+width: 60px;
+height: 57px;
+margin-right: 24px;
+
+overflow: hidden;
+
+`;                    
+const Img = styled.img`
     width: 57px;
     height: 57px;
     border-radius: 50%;
+    border: none;
     background-color: black;
     margin-right: 24px;
+
+    position: absolute;
+
 `;
 
 const Textbox = styled.div`
@@ -128,14 +140,19 @@ function Custom() {
             <GlobalStyle />
             <Container>
                 <Title>Custom</Title>
-                <Box>
-                    <Imgbox src = "{stylelist[0].Img}"></Imgbox>
-                    <Textbox>
-                        <Sname>{stylelist[0].sname}</Sname>
-                        <Description>{stylelist[0].description}</Description>
-                    </Textbox>
+                    {stylelist.map((item, index) => (
+                        <Box key={item.id}>
+                            <Imgbox>
+                                <Img src = {item.Img}></Img>
+                            </Imgbox>
+                            <Textbox>
+                                <Sname>{item.sname}</Sname>
+                                <Description>{item.description}</Description>
+                            </Textbox>
+                         </Box>
 
-                </Box>
+                        )
+                    )}
             </Container>
         </>
     );

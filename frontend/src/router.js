@@ -4,7 +4,6 @@ import Registerrr from './Registerrr';
 import Login from './Login';
 import Search from './Search';
 import Custom from './Custom';
-import Customtest from './Customtest';
 
 function Router() {
     return (
@@ -15,7 +14,6 @@ function Router() {
                 <Route path='/login' element={<Login />} />
                 <Route path='/search' element={<Search />} />
                 <Route path='/custom' element={<Custom />} />
-                <Route path='/customtest' element={<Customtest />} />
                 
             </Routes>
         </BrowserRouter>
